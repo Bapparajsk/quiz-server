@@ -1,11 +1,15 @@
-import { getAuth } from "@clerk/express";
-import type { NextFunction, Request, Response } from "express";
+import type {
+    NextFunction,
+    Request,
+    Response,
+} from "express";
 
+import { getAuth } from "@clerk/express";
 
 export function requireUser(
     req: Request,
     res: Response,
-    next: NextFunction
+    next: NextFunction,
 ) {
     const auth = getAuth(req);
 
