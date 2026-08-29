@@ -7,9 +7,6 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "db:emit": "prisma contract emit",
-    "db:init": "prisma db init",
-    "db:verify": "prisma db verify",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
@@ -18,10 +15,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "@clerk/express": "^2.1.63",
-    "@prisma/orm-postgres": "^8.0.0-rc.8",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
@@ -31,7 +27,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@prisma/cli-engine": "^0.2.3",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^26.4.0",
@@ -39,7 +34,6 @@
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.11.0",
     "prettier": "^3.9.6",
-    "prisma": "^8.0.0-rc.10",
     "tsx": "^4.23.12",
     "typescript": "^7.0.2",
     "typescript-eslint": "^8.68.0"

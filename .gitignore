@@ -3,3 +3,9 @@ dist
 .env
 node_modules/
 dist/
+
+# agents
+.agents
+.claude
+.cursor
+.devin

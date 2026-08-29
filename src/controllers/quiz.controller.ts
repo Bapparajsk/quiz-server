@@ -6,7 +6,7 @@ import {
     getQuizByIdService,
     getQuizzesService,
     updateQuizService,
-} from "../services/quiz.service.js";
+} from "../services/quiz.service";
 
 /**
  * Create Quiz

@@ -42,15 +42,21 @@ export async function createQuizService(input: CreateQuizInput) {
         createdById,
     } = input;
 
-    const user = await db.user.findUnique({
-        where: {
-            clerkId: createdById,
-        },
-    });
+    // const user = await db.orm.public.User.({
+    //     where: {
+    //         clerkId: createdById,
+    //     },
+    // });
+
+    const user = await db.orm.public.User.where({
+
+    }).first();
 
     if (!user) {
         throw new Error("User not found");
     }
+
+
 
     const quiz = await db.quiz.create({
         data: {
